@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'
+//import Application from './components'
+//import Application from '@tria-sdk/authenticate'
+import Application from './components/index2'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width:0, height:0, top:0, left:0, position:"fixed",zIndex: 9999}}>
+      <Application
+        logo='https://www.empireofsight.com/assets/images/logo-icon.svg'
+        dappName='Empire of Sight'
+        dappDomain={window.parent.origin}
+        primaryColor='#9A86FF'
+        defaultChain='FUSE'
+        supportedChains={['FUSE', 'POLYGON']}
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
